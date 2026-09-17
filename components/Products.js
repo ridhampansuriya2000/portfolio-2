@@ -5,7 +5,7 @@ import { FiExternalLink, FiGlobe, FiPackage } from "react-icons/fi";
 import { SiGooglechrome } from "react-icons/si";
 import RevealSection, { StaggerGroup, StaggerItem } from "./RevealSection";
 import { products } from "@/data/resume";
-import { colorAt } from "@/lib/colors";
+import { colorAt, colorByName } from "@/lib/colors";
 
 const linkIcons = {
   web: FiGlobe,
@@ -27,7 +27,7 @@ export default function Products() {
 
         <StaggerGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {products.map((product, index) => {
-            const color = colorAt(index + 5);
+            const color = product.color ? colorByName(product.color) : colorAt(index + 5);
             const websiteUrl = product.links.find((link) => link.type === "web")?.href;
             return (
               <StaggerItem key={product.name}>

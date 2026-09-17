@@ -158,6 +158,7 @@ export const products = [
   {
     name: "Job Hunter for LinkedIn",
     logo: "/job-hunter-logo.png",
+    color: "blue",
     tagline: "Chrome extension + web dashboard",
     description:
       "A multi-keyword LinkedIn job finder that runs as a Chrome extension, scanning for new matches in the background and syncing every result to a web dashboard for tracking and follow-up.",
@@ -173,6 +174,7 @@ export const products = [
   },
   {
     name: "GameBord",
+    color: "emerald",
     tagline: "Multiplayer game platform",
     description:
       "A multiplayer gaming hub with five games — Suni Chokdi (tic-tac-toe), Bingo, SOS, Mindi Coat, and Reverse Rush — playable online against friends or offline against unbeatable bots, with live voice chat on social games.",
