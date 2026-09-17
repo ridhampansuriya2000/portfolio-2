@@ -197,7 +197,8 @@ export default function AdminPage() {
   const [reloadKey, setReloadKey] = useState(0);
 
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-6 py-16">
+    <main className="dark min-h-screen bg-ink px-6 py-16 text-white">
+      <div className="mx-auto max-w-3xl">
       <h1 className="font-display text-2xl font-bold text-white">Portfolio Admin</h1>
       <p className="mt-2 text-sm text-white/50">
         Upload a new profile picture or resume. Each upload overwrites the previous one stored
@@ -245,6 +246,7 @@ export default function AdminPage() {
           reloadKey={reloadKey}
         />
         <CurrentPreview title="Resume" kind="pdf" apiPath="/api/resume" reloadKey={reloadKey} />
+      </div>
       </div>
     </main>
   );

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./app/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
@@ -15,6 +16,12 @@ module.exports = {
           light: "#a78bfa",
           teal: "#2dd4bf",
         },
+        // Foreground ink color: white in dark mode, near-black in light mode.
+        // Lets existing `text-fg/60`-style opacity utilities flip themes
+        // without touching every className.
+        fg: "rgb(var(--fg) / <alpha-value>)",
+        // Base page surface: same value as `ink` in dark mode, white in light.
+        surface: "rgb(var(--surface) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
