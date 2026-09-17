@@ -35,11 +35,20 @@ export default function Products() {
                   className={`group h-full rounded-2xl p-7 transition-all ${color.card} ${color.border} ${color.glow}`}
                 >
                   <div className="flex items-center gap-3">
-                    <span
-                      className={`flex h-11 w-11 items-center justify-center rounded-xl transition-transform group-hover:scale-110 group-hover:rotate-6 ${color.iconBg} ${color.icon}`}
-                    >
-                      <FiPackage size={18} />
-                    </span>
+                    {product.logo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={product.logo}
+                        alt={`${product.name} logo`}
+                        className="h-11 w-11 rounded-xl object-cover shadow-md transition-transform group-hover:scale-110 group-hover:rotate-6"
+                      />
+                    ) : (
+                      <span
+                        className={`flex h-11 w-11 items-center justify-center rounded-xl transition-transform group-hover:scale-110 group-hover:rotate-6 ${color.iconBg} ${color.icon}`}
+                      >
+                        <FiPackage size={18} />
+                      </span>
+                    )}
                     <div>
                       <h3 className={`font-display text-lg font-semibold ${color.text}`}>
                         {websiteUrl ? (
