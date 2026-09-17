@@ -156,7 +156,7 @@ export const projects = [
 
 export const products = [
   {
-    name: "LinkedIn Job Hunter",
+    name: "Job Hunter for LinkedIn",
     tagline: "Chrome extension + web dashboard",
     description:
       "A multi-keyword LinkedIn job finder that runs as a Chrome extension, scanning for new matches in the background and syncing every result to a web dashboard for tracking and follow-up.",

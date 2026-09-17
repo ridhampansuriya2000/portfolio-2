@@ -28,6 +28,7 @@ export default function Products() {
         <StaggerGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {products.map((product, index) => {
             const color = colorAt(index + 5);
+            const websiteUrl = product.links.find((link) => link.type === "web")?.href;
             return (
               <StaggerItem key={product.name}>
                 <div
@@ -41,7 +42,18 @@ export default function Products() {
                     </span>
                     <div>
                       <h3 className={`font-display text-lg font-semibold ${color.text}`}>
-                        {product.name}
+                        {websiteUrl ? (
+                          <a
+                            href={websiteUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                          >
+                            {product.name}
+                          </a>
+                        ) : (
+                          product.name
+                        )}
                       </h3>
                       <p className="text-xs text-fg/50">{product.tagline}</p>
                     </div>
