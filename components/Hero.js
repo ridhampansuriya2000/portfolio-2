@@ -66,6 +66,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute -top-32 -left-24 h-96 w-96 rounded-full bg-accent/30 blur-3xl animate-blob" />
       <div className="pointer-events-none absolute top-1/3 -right-24 h-96 w-96 rounded-full bg-accent-teal/20 blur-3xl animate-blob-slow" />
       <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-fuchsia-600/15 blur-3xl animate-blob" />
+      <div className="pointer-events-none absolute top-10 right-1/4 h-64 w-64 rounded-full bg-amber-500/10 blur-3xl animate-blob-slow" />
 
       <motion.div
         variants={container}

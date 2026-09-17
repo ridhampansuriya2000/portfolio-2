@@ -3,6 +3,7 @@
 import { FiCode, FiGlobe, FiTrendingUp, FiUsers } from "react-icons/fi";
 import RevealSection, { StaggerGroup, StaggerItem } from "./RevealSection";
 import { profile, education, certificates } from "@/data/resume";
+import { colorAt } from "@/lib/colors";
 
 const highlights = [
   {
@@ -31,7 +32,7 @@ export default function About() {
   return (
     <section id="about" className="relative mx-auto max-w-6xl px-6 py-28">
       <RevealSection className="max-w-2xl">
-        <p className="text-sm font-semibold uppercase tracking-widest text-accent-light">
+        <p className="text-sm font-semibold uppercase tracking-widest text-rose-300">
           About Me
         </p>
         <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
@@ -75,17 +76,24 @@ export default function About() {
         </RevealSection>
 
         <StaggerGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          {highlights.map(({ icon: Icon, title, text }) => (
-            <StaggerItem key={title}>
-              <div className="group h-full rounded-2xl glass-card p-6 transition-colors hover:border-accent/40">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent-light transition-transform group-hover:scale-110">
-                  <Icon size={20} />
+          {highlights.map(({ icon: Icon, title, text }, index) => {
+            const color = colorAt(index);
+            return (
+              <StaggerItem key={title}>
+                <div
+                  className={`group h-full rounded-2xl glass-card p-6 transition-all ${color.border} ${color.glow}`}
+                >
+                  <div
+                    className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${color.iconBg} ${color.icon} transition-transform group-hover:scale-110`}
+                  >
+                    <Icon size={20} />
+                  </div>
+                  <h3 className="font-semibold text-white">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/55">{text}</p>
                 </div>
-                <h3 className="font-semibold text-white">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/55">{text}</p>
-              </div>
-            </StaggerItem>
-          ))}
+              </StaggerItem>
+            );
+          })}
         </StaggerGroup>
       </div>
     </section>

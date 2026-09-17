@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import { FiBriefcase, FiMapPin } from "react-icons/fi";
 import RevealSection from "./RevealSection";
 import { experience } from "@/data/resume";
+import { colorAt } from "@/lib/colors";
 
 export default function Experience() {
   return (
     <section id="experience" className="relative mx-auto max-w-6xl px-6 py-28">
       <RevealSection className="max-w-2xl">
-        <p className="text-sm font-semibold uppercase tracking-widest text-accent-light">
+        <p className="text-sm font-semibold uppercase tracking-widest text-teal-300">
           Experience
         </p>
         <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
@@ -25,12 +26,13 @@ export default function Experience() {
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
           style={{ transformOrigin: "top" }}
-          className="absolute left-[15px] top-2 bottom-2 w-px bg-gradient-to-b from-accent via-accent-teal to-transparent sm:left-1/2"
+          className="absolute left-[15px] top-2 bottom-2 w-px bg-gradient-to-b from-violet-400 via-teal-400 to-rose-400/40 sm:left-1/2"
         />
 
         <div className="space-y-14">
           {experience.map((job, index) => {
             const isEven = index % 2 === 0;
+            const color = colorAt(index);
             return (
               <div
                 key={job.company}
@@ -41,7 +43,7 @@ export default function Experience() {
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 }}
-                  className="absolute left-0 top-1.5 flex h-8 w-8 items-center justify-center rounded-full border-2 border-accent bg-ink text-accent-light sm:left-1/2 sm:-translate-x-1/2"
+                  className={`absolute left-0 top-1.5 flex h-8 w-8 items-center justify-center rounded-full border-2 bg-ink ${color.ring} ${color.icon} sm:left-1/2 sm:-translate-x-1/2`}
                 >
                   <FiBriefcase size={14} />
                 </motion.div>
@@ -50,8 +52,8 @@ export default function Experience() {
                   direction={isEven ? "left" : "right"}
                   className={`${isEven ? "sm:col-start-1 sm:text-right sm:pr-14" : "sm:col-start-2 sm:pl-14"}`}
                 >
-                  <div className="rounded-2xl glass-card p-6 transition-colors hover:border-accent/40">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-accent-light">
+                  <div className={`rounded-2xl glass-card p-6 transition-all ${color.border} ${color.glow}`}>
+                    <p className={`text-xs font-semibold uppercase tracking-wide ${color.text}`}>
                       {job.period}
                     </p>
                     <h3 className="mt-2 font-display text-lg font-semibold text-white">

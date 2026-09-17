@@ -57,7 +57,7 @@ export default function Navbar() {
           href="#home"
           className="font-display text-lg font-semibold tracking-tight text-white"
         >
-          RP<span className="text-accent">.</span>
+          RP<span className="text-gradient">.</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
