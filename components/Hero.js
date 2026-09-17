@@ -59,14 +59,14 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-b from-violet-50 via-white to-white pt-28 pb-20 dark:from-transparent dark:via-transparent dark:to-transparent"
+      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20"
     >
       <div className="pointer-events-none absolute inset-0 bg-grid-pattern bg-[size:44px_44px] [mask-image:radial-gradient(ellipse_at_center,black_10%,transparent_70%)]" />
 
-      <div className="pointer-events-none absolute -top-32 -left-24 h-96 w-96 rounded-full bg-accent/20 blur-3xl animate-blob dark:bg-accent/30" />
-      <div className="pointer-events-none absolute top-1/3 -right-24 h-96 w-96 rounded-full bg-accent-teal/15 blur-3xl animate-blob-slow dark:bg-accent-teal/20" />
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-fuchsia-500/10 blur-3xl animate-blob dark:bg-fuchsia-600/15" />
-      <div className="pointer-events-none absolute top-10 right-1/4 h-64 w-64 rounded-full bg-amber-400/10 blur-3xl animate-blob-slow dark:bg-amber-500/10" />
+      <div className="pointer-events-none absolute -top-32 -left-24 h-96 w-96 rounded-full bg-accent/25 blur-3xl animate-blob dark:bg-accent/30" />
+      <div className="pointer-events-none absolute top-1/3 -right-24 h-96 w-96 rounded-full bg-accent-teal/20 blur-3xl animate-blob-slow dark:bg-accent-teal/20" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-fuchsia-500/15 blur-3xl animate-blob dark:bg-fuchsia-600/15" />
+      <div className="pointer-events-none absolute top-10 right-1/4 h-64 w-64 rounded-full bg-amber-400/15 blur-3xl animate-blob-slow dark:bg-amber-500/10" />
 
       <motion.div
         variants={container}

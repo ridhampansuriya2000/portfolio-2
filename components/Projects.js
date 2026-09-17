@@ -8,7 +8,7 @@ import { colorAt } from "@/lib/colors";
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative bg-amber-50/40 dark:bg-transparent">
+    <section id="projects" className="relative">
       <div className="mx-auto max-w-6xl px-6 py-28">
         <RevealSection className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-amber-600 dark:text-amber-300">
@@ -27,15 +27,15 @@ export default function Projects() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ type: "spring", stiffness: 250, damping: 20 }}
-                  className={`h-full rounded-2xl glass-card p-7 transition-all ${color.border} ${color.glow}`}
+                  className={`group h-full rounded-2xl p-7 transition-all ${color.card} ${color.border} ${color.glow}`}
                 >
                   <div className="flex items-center gap-3">
                     <span
-                      className={`flex h-10 w-10 items-center justify-center rounded-xl ${color.iconBg} ${color.icon}`}
+                      className={`flex h-10 w-10 items-center justify-center rounded-xl transition-transform group-hover:scale-110 group-hover:rotate-6 ${color.iconBg} ${color.icon}`}
                     >
                       <FiFolder size={18} />
                     </span>
-                    <h3 className="font-display text-lg font-semibold text-fg">{proj.name}</h3>
+                    <h3 className={`font-display text-lg font-semibold ${color.text}`}>{proj.name}</h3>
                   </div>
 
                   <ul className="mt-5 space-y-2 text-sm leading-relaxed text-fg/55">

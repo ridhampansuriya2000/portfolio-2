@@ -8,7 +8,7 @@ import { colorAt } from "@/lib/colors";
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative bg-teal-50/40 dark:bg-transparent">
+    <section id="experience" className="relative">
       <div className="mx-auto max-w-6xl px-6 py-28">
         <RevealSection className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-300">
@@ -44,7 +44,8 @@ export default function Experience() {
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.1 }}
-                    className={`absolute left-0 top-1.5 flex h-8 w-8 items-center justify-center rounded-full border-2 bg-surface ${color.ring} ${color.icon} sm:left-1/2 sm:-translate-x-1/2`}
+                    whileHover={{ scale: 1.15, rotate: 8 }}
+                    className={`absolute left-0 top-1.5 flex h-8 w-8 items-center justify-center rounded-full border-2 border-surface ${color.iconBg} ${color.icon} sm:left-1/2 sm:-translate-x-1/2`}
                   >
                     <FiBriefcase size={14} />
                   </motion.div>
@@ -53,11 +54,11 @@ export default function Experience() {
                     direction={isEven ? "left" : "right"}
                     className={`${isEven ? "sm:col-start-1 sm:text-right sm:pr-14" : "sm:col-start-2 sm:pl-14"}`}
                   >
-                    <div className={`rounded-2xl glass-card p-6 transition-all ${color.border} ${color.glow}`}>
+                    <div className={`rounded-2xl p-6 transition-all ${color.card} ${color.border} ${color.glow}`}>
                       <p className={`text-xs font-semibold uppercase tracking-wide ${color.text}`}>
                         {job.period}
                       </p>
-                      <h3 className="mt-2 font-display text-lg font-semibold text-fg">
+                      <h3 className={`mt-2 font-display text-lg font-semibold ${color.text}`}>
                         {job.role}
                       </h3>
                       <p className="text-sm font-medium text-fg/70">{job.company}</p>

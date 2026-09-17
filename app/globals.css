@@ -20,10 +20,21 @@ html {
 
 body {
   background-color: rgb(var(--surface));
+  background-image:
+    radial-gradient(1100px circle at 8% -10%, rgba(139, 92, 246, 0.14), transparent 42%),
+    radial-gradient(900px circle at 92% 8%, rgba(45, 212, 191, 0.14), transparent 42%),
+    radial-gradient(900px circle at 15% 55%, rgba(244, 114, 182, 0.12), transparent 42%),
+    radial-gradient(900px circle at 88% 60%, rgba(251, 191, 36, 0.12), transparent 42%),
+    radial-gradient(900px circle at 30% 95%, rgba(56, 189, 248, 0.12), transparent 42%);
+  background-attachment: fixed;
   color: rgb(var(--fg));
   overflow-x: hidden;
   width: 100%;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-image: none;
 }
 
 /* Offset scroll targets so the sticky navbar never covers a section heading */

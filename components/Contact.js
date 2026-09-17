@@ -29,7 +29,7 @@ const links = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative bg-sky-50/40 dark:bg-transparent">
+    <section id="contact" className="relative">
       <div className="mx-auto max-w-6xl px-6 py-28">
         <RevealSection className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-sky-600 dark:text-sky-300">
@@ -51,14 +51,14 @@ export default function Contact() {
                   href={href}
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className={`flex h-full flex-col items-center gap-3 rounded-2xl glass-card p-6 text-center transition-all ${color.border} ${color.glow}`}
+                  className={`group flex h-full flex-col items-center gap-3 rounded-2xl p-6 text-center transition-all ${color.card} ${color.border} ${color.glow}`}
                 >
                   <span
-                    className={`flex h-11 w-11 items-center justify-center rounded-xl ${color.iconBg} ${color.icon}`}
+                    className={`flex h-11 w-11 items-center justify-center rounded-xl transition-transform group-hover:scale-110 group-hover:rotate-6 ${color.iconBg} ${color.icon}`}
                   >
                     <Icon size={18} />
                   </span>
-                  <span className="text-xs uppercase tracking-wide text-fg/40">{label}</span>
+                  <span className={`text-xs uppercase tracking-wide ${color.text}`}>{label}</span>
                   <span className="break-all text-sm font-medium text-fg">{value}</span>
                 </motion.a>
               </StaggerItem>

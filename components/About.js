@@ -30,7 +30,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-rose-50/40 dark:bg-transparent">
+    <section id="about" className="relative">
       <div className="mx-auto max-w-6xl px-6 py-28">
         <RevealSection className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-rose-600 dark:text-rose-300">
@@ -82,14 +82,14 @@ export default function About() {
               return (
                 <StaggerItem key={title}>
                   <div
-                    className={`group h-full rounded-2xl glass-card p-6 transition-all ${color.border} ${color.glow}`}
+                    className={`group h-full rounded-2xl p-6 transition-all ${color.card} ${color.border} ${color.glow}`}
                   >
                     <div
-                      className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${color.iconBg} ${color.icon} transition-transform group-hover:scale-110`}
+                      className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl transition-transform group-hover:scale-110 group-hover:rotate-6 ${color.iconBg} ${color.icon}`}
                     >
                       <Icon size={20} />
                     </div>
-                    <h3 className="font-semibold text-fg">{title}</h3>
+                    <h3 className={`font-semibold ${color.text}`}>{title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-fg/55">{text}</p>
                   </div>
                 </StaggerItem>

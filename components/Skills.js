@@ -26,7 +26,7 @@ const categoryIcons = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative bg-violet-50/40 dark:bg-transparent">
+    <section id="skills" className="relative">
       <div className="mx-auto max-w-6xl px-6 py-28">
         <RevealSection className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300">
@@ -44,15 +44,15 @@ export default function Skills() {
             return (
               <StaggerItem key={group.category}>
                 <div
-                  className={`h-full rounded-2xl glass-card p-6 transition-all ${color.border} ${color.glow}`}
+                  className={`group h-full rounded-2xl p-6 transition-all ${color.card} ${color.border} ${color.glow}`}
                 >
                   <div className="flex items-center gap-3">
                     <span
-                      className={`flex h-9 w-9 items-center justify-center rounded-lg ${color.iconBg} ${color.icon}`}
+                      className={`flex h-9 w-9 items-center justify-center rounded-lg transition-transform group-hover:scale-110 group-hover:rotate-6 ${color.iconBg} ${color.icon}`}
                     >
                       <Icon size={16} />
                     </span>
-                    <h3 className="font-display text-base font-semibold text-fg">
+                    <h3 className={`font-display text-base font-semibold ${color.text}`}>
                       {group.category}
                     </h3>
                   </div>
