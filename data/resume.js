@@ -154,6 +154,24 @@ export const projects = [
   },
 ];
 
+export const products = [
+  {
+    name: "LinkedIn Job Hunter",
+    tagline: "Chrome extension + web dashboard",
+    description:
+      "A multi-keyword LinkedIn job finder that runs as a Chrome extension, scanning for new matches in the background and syncing every result to a web dashboard for tracking and follow-up.",
+    tech: ["Chrome Extension", "Next.js", "Dashboard"],
+    links: [
+      { label: "Web Dashboard", href: "https://www.linkedinjobhunter.com/", type: "web" },
+      {
+        label: "Chrome Extension",
+        href: "https://chromewebstore.google.com/detail/maofgnjjcffdahjkfjgfgoicdnppklbl?utm_source=item-share-cb",
+        type: "extension",
+      },
+    ],
+  },
+];
+
 export const education = [
   {
     degree: "B.E. Information Technology",
@@ -180,5 +198,6 @@ export const navLinks = [
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#products", label: "Products" },
   { href: "#contact", label: "Contact" },
 ];
