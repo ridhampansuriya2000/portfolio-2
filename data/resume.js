@@ -161,7 +161,7 @@ export const products = [
     tagline: "Chrome extension + web dashboard",
     description:
       "A multi-keyword LinkedIn job finder that runs as a Chrome extension, scanning for new matches in the background and syncing every result to a web dashboard for tracking and follow-up.",
-    tech: ["Chrome Extension", "Next.js", "Dashboard"],
+    tech: ["Next.js", "Prisma", "Supabase", "GA4", "Razorpay", "Gemini AI"],
     links: [
       { label: "Web Dashboard", href: "https://www.linkedinjobhunter.com/", type: "web" },
       {
@@ -169,6 +169,16 @@ export const products = [
         href: "https://chromewebstore.google.com/detail/maofgnjjcffdahjkfjgfgoicdnppklbl?utm_source=item-share-cb",
         type: "extension",
       },
+    ],
+  },
+  {
+    name: "GameBord",
+    tagline: "Multiplayer game platform",
+    description:
+      "A multiplayer gaming hub with five games — Suni Chokdi (tic-tac-toe), Bingo, SOS, Mindi Coat, and Reverse Rush — playable online against friends or offline against unbeatable bots, with live voice chat on social games.",
+    tech: ["Next.js", "Socket.io", "Node.js", "Tailwind CSS"],
+    links: [
+      { label: "Play Now", href: "https://gameboard.ridhampansuriya.site/", type: "web" },
     ],
   },
 ];
