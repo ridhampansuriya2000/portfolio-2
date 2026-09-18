@@ -2,6 +2,7 @@ export const profile = {
   name: "Ridham Pansuriya",
   initials: "RP",
   title: "Senior React.js / Next.js Developer",
+  siteUrl: "https://ridhampansuriya.site",
   tagline: [
     "Building real-time systems that scale.",
     "Crafting pixel-perfect UI, fast.",
